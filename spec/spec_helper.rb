@@ -1,4 +1,4 @@
-ENV["SINATRA_ENV"] = "test"
+ENV["SINATRA_ENV"] = "development"
 
 require_relative '../config/environment'
 require 'rack/test'
