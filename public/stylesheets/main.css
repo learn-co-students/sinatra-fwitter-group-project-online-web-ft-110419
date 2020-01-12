@@ -1,0 +1,36 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #326770;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container > h1 {
+  text-align: center;
+}
+
+.tweet {
+  width: 300px;
+  align-self: center;
+  background: #53777d;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+p.tweet-content {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
