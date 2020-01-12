@@ -121,6 +121,8 @@ Tweets should have content and belong to a user.
 
 ### Associations
 
+#Users should have a username, email, and password, and have many tweets
+
 You'll need to set up the relationship between users and tweets. Think about how
 the user interacts with the tweets, what belongs to who?
 
