@@ -1,4 +1,4 @@
-<h1>Welcome to Fwitter<%= ", " + current_user.username if logged_in? %>!</h1>
+<h1>Welcome, <%= current_user.username %>!</h1>
 <% @tweets.each do |tweet| %>
   <div class="tweet">
     <p class="tweet-content"><%= tweet.content %></p>

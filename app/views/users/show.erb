@@ -3,9 +3,5 @@
 <% @user.tweets.each do |tweet| %>
   <div class="tweet">
     <%= tweet.content %>
-    <form action="/tweets" method="POST">
-      <input type="hidden" id="hidden" name="_method" value="DELETE">
-      <input type="submit" value="X">
-    </form>
   </div>
 <% end %>

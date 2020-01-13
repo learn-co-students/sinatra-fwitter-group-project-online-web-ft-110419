@@ -46,8 +46,7 @@ class UsersController < ApplicationController
 
 
   get '/users/:slug' do
-    # TODO slug method in user model
-    @user = User.find_by(username: params[:slug])
+    @user = User.find_by_slug(params[:slug])
 
     erb :'/users/show'
   end
