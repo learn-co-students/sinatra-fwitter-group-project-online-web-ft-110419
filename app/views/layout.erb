@@ -3,13 +3,30 @@
   <head>
     <title>Fwitter</title>
   </head>
+  <style>
+    * { margin: 0; }
+    main { 
+      margin: 0 auto;
+      position: relative;
+      width: 600px;
+      background-color: white;
+      padding:0 20px;
+    }
+    body {
+      background-color: #333;
+    }
+  </style>
   <body>
-
-    <div class="container">
+  <main>
+    <div class="containers">
       <h1>Welcome to Fwitter!</h1>
       <h2>This is located in layout.erb!</h2>
       <h2>Don't forget to <strong>yield</strong> your views!</h2>
     </div>
+  
+    <%= yield%>
+  </main>
+
 
   </body>
 </html>

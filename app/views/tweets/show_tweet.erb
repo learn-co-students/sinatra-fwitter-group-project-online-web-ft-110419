@@ -1,0 +1,12 @@
+<h2> 
+
+    <%=current_user.username%> tweeted: 
+</h2>
+<div><%=@tweet.content%></div>
+<form action="/tweets" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="delete" value="Delete Tweet">
+</form> 
+<div><%=@tweet.content%></div>
+<a href="/tweets/<%=@tweet.id%>/edit">Edit Tweet</a>
+<div>Go back to <a href="/tweets/<%=@tweet.id%>">Tweets</a>  </div>
