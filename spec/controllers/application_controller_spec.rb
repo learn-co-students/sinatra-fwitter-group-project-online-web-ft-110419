@@ -18,40 +18,40 @@ describe ApplicationController do
     end
 
     it 'signup directs user to twitter index' do
-      params = {
+      params = { :user =>{
         :username => "skittles123",
         :email => "skittles@aol.com",
-        :password => "rainbows"
+        :password => "rainbows"}
       }
       post '/signup', params
       expect(last_response.location).to include("/tweets")
     end
 
     it 'does not let a user sign up without a username' do
-      params = {
+      params = {:user => {
         :username => "",
         :email => "skittles@aol.com",
-        :password => "rainbows"
+        :password => "rainbows"}
       }
       post '/signup', params
       expect(last_response.location).to include('/signup')
     end
 
     it 'does not let a user sign up without an email' do
-      params = {
-        :username => "skittles123",
+      params = {:user =>
+        {:username => "skittles123",
         :email => "",
-        :password => "rainbows"
+        :password => "rainbows"}
       }
       post '/signup', params
       expect(last_response.location).to include('/signup')
     end
 
     it 'does not let a user sign up without a password' do
-      params = {
+      params = {:user => {
         :username => "skittles123",
         :email => "skittles@aol.com",
-        :password => ""
+        :password => ""}
       }
       post '/signup', params
       expect(last_response.location).to include('/signup')
@@ -59,10 +59,10 @@ describe ApplicationController do
 
     it 'does not let a logged in user view the signup page' do
       #user = User.create(:username => "skittles123", :email => "skittles@aol.com", :password => "rainbows")
-      params = {
+      params = {:user =>{
         :username => "skittles123",
         :email => "skittles@aol.com",
-        :password => "rainbows"
+        :password => "rainbows"}
       }
       post '/signup', params
       get '/signup'
